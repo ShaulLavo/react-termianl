@@ -1,27 +1,42 @@
-# React + TypeScript + Vite
+# React-Terminal: Work in Progress 🚧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-Terminal is an implementation of a terminal UI in React, built upon the robust foundation of [xterm](https://xtermjs.org/). While retaining the core functionality of xterm, React-Terminal introduces a set of styling controls and defaults to deliver a terminal experience that feels intuitive right out of the box.
 
-Currently, two official plugins are available:
+## Features 🌟
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Full xterm Compatibility:** Leverage the power and flexibility of xterm, right out of the box.
+- **Styling Controls:** Easy-to-use styling controls to make the terminal look and feel the way you want.
+- **Intuitive Defaults:** A curated set of default configurations for an out-of-the-box intuitive terminal experience.
+- **React-Ready:** Seamlessly integrate with your React applications for a native terminal experience.
 
-## Expanding the ESLint configuration
+## Usage 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Import and utilize the React-Terminal component within your project.
 
-- Configure the top-level `parserOptions` property like this:
+\```typescript
+import { Terminal } from 'react-terminal';
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+function App() {
+return (
+<Terminal />
+);
+}
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+export default App;
+\```
+
+## Customization 🎨
+
+React-Terminal provides easy customization options to tailor the terminal UI according to your preferences.
+
+\```typescript
+<Terminal
+options={{
+    fontFamily: 'Monaco, monospace',
+    theme: {
+      background: '#202B33',
+      foreground: '#F5F8FA',
+    }
+  }}
+/>
+\```
